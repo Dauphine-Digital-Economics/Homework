@@ -1,2 +1,3 @@
 # Homework
-Homework assignments are released and submitted here
+
+Homework assignments are released here weekly on Sundays. The deadline is the next Sunday midnight. Please email the professor with a Github link of your work.
