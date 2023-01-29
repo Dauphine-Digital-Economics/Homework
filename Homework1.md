@@ -45,7 +45,7 @@ After you have done the setup, note that the blue section is your original syste
 
 ###### 2. Connect your local machine to Github
 
-Oringally, this setup could be completely skipped because it was done over https. Given he numerous insecurities surrounding https, Github has now moved onto SSH connections. You can still pull stuff down from online to local machine via https but pushing things upstream (a fancy way of saying putting your work online again), is no longer supported via https. Therefore we need to:
+Oringally, this setup could be completely skipped because it was done over https. Given the numerous insecurities surrounding https, Github has now moved onto SSH connections. You can still pull stuff down from online to local machine via https but pushing things upstream (a fancy way of saying putting your work online again), is no longer supported via https. Therefore we need to:
 1. Generate a local SSH public and private key pair
 2. Paste the public key into Github settings so Github can verify the connection requests from your machine (This is similar to public key signings in a wallet)
 
@@ -76,9 +76,25 @@ Whenever you have made a block of changes and feel like you have reached a logic
 
 ### Snapshot setup and DAO fundamentals
 
+Snapshot is an off-chain (aka: no additional gas fees) voting mechanism that can allow DAOs and protocol to get a feel of community sentiment before making an official onchain proposal. We will be using [this](https://demo.snapshot.org/#/) platform, demo version since we don't have real tokens, to vote on the grade for the weekly presentations. Given the anonymous nature of these votes, the following veto rules are in place:
+1. You cannot vote for yourself. If there are more than n-2 amount of votes for any presentation, votes do not count for that presentation.
+2. If the general consensus is far from the professor assessment AND there are no comments attached to the vote explaining the grade, votes are vetoed.
+
+To start, please join the DAO [here](https://demo.snapshot.org/#/dauphine.eth). Please note, to join and vote, you must have a MetaMask wallet because all activities are signed with your wallet's public key. You will see there is a proposal already up asking about your feelings towards this course. Try to vote on it an see what happens.
+
+Proposals are the official way in decentralized communities to present a new idea. With this in mind, an effective proposal will contain the following sections:
+1. An introduction of the team behind the proposal - so that people have a feeling of trust for its development when the proposal is decided on.
+2. A value proposition and main impact of this proposal
+3. A link to the technical details of this proposal
+4. A budget or financial structure if the proposal is asking or interacting with funds
+
+For the weekly presentations, the DAO is set up so that only authors can post proposals. Therefore, if it is your week to present, please send your wallet address to the administrator privately over the class Discord. For the rest of the class, when you are voting, please include some comments for your grade!
+
+A grading structure can be found here. Use this rubric for weekly and final presentations.
+
 ### Web Development Exercise
 
-The class [website](https://dauphine-digital-economics.github.io/Dauphine-Digital-Economics/) is a demonstration of a simply constructed front end that is visual enough to showcase our work and be an easy reference or presentation. It is made from pure HTML, CSS and JS. Today, there are many frameworks which simplify many tasks of web development. If you would like to dive deeper into web development, it is better to start with an in-demand framework such as [React](https://reactjs.org/) or [flutter](https://flutter.dev/) for mobile-first development. In our homework, nothing fancy will be necessary.
+The class [website](https://dauphine-digital-economics.github.io/Dauphine-Digital-Economics/) is a demonstration of a simply constructed front end that is visual enough to showcase our work and be an easy reference or presentation. It is made from pure HTML, CSS and JS. Today, there are many frameworks which simplify many tasks of web development. If you would like to dive deeper into web development, it is better to start with an in-demand framework such as [React](https://reactjs.org/) or [Flutter](https://flutter.dev/) for mobile-first development. In our homework, nothing fancy will be necessary.
 
 ##### 1. Fork the class website into your own Github account
 
