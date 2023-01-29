@@ -14,6 +14,34 @@ Note, test funds are capped to regulate supply and prevent abuse. Try to request
 
 ### Github online and local setup
 
+Github is a cloud hosting platform for Git repositories. **Git** is the version control technology powering open source through version control and contribution techniques. There are many enterprise solutions to Github like Gitlab and Bitbucket. These solutions tend to add in enterprise features such as deployment pipelines and project management features. Ever since Github was acquired by Microsoft in 2018, Github has also gained many new enterprise features as well as a gamification aspect with badges.
+
+##### Git online setup
+
+At the start of the course, it is totally possible to use Github solely through their online interface. If you have not yet, [create your own Github account and fork the class website respository](#1-fork-the-class-website-into-your-own-github-account). You can click into a repository from the main page, add a new file or click on an existing file, and then simply click on the pencil button and edit directly in Github. Don't forget to write a little commit message before hitting the green "commit changes" button at the bottom.
+
+As time goes on and your projects become more complex, you will need to move Git capabilities to your local machine. This can be achieved either through a chosen IDE, for exmaple VSCode has [Github integration](https://code.visualstudio.com/docs/sourcecontrol/github), which you use to write your smart contracts or you can go completely old school and use the command line interfact (CLI). This homework will teach you basics of the CLI because having a terminal(Mac) or shell(Windows) is ubiquitous on every machine, honoring the early days of computer history where graphics did not exist and it was simply typing into a black screen.
+
+##### Git local setup and CLI commands
+
+The most fundamental commands any Github user needs to master is:
+1. Connect your local machine to Github
+2. How to clone a respository from online to your local machine
+3. How to add and commit the changes locally
+4. How to push the changes you made locally back up into the cloud for public consumption
+
+These commands are the basics for when you are working alone. Once collaboration starts, branching, pull requests and resolving merge conflicts becomes important and will be covered in a later homework.
+
+**Note for Windows users:** Powershell and Bash is difficult and cumbersome to use. Whereas Mac and all Linux based machines can simply open a terminal and type in [well documented and standardized](https://man7.org/linux/man-pages/dir_section_1.html) Linux commands, Windows users have to learn a whole different set of commands and argument inputs. This is another use case of why privatization is restrictive as compared to open standards. For Windows users, **please [download](https://learn.microsoft.com/en-us/windows/wsl/install) WSL**. This simulates a Linux kernel on top of your Powershell and allows you to use the same commands as shown below. After a successful installation try to type in wsl into the Powershell and you should see something like this:
+
+
+###### 1. Connect your local machine to Github
+Oringally, this setup could be completely skipped because it was done over https. Given he numerous insecurities surrounding https, Github has now moved onto SSH connections. You can still pull stuff down from online to local machine via https but pushing things upstream (a fancy way of saying putting your work online again), is no longer supported via https. Therefore we need to:
+1. Generate a local SSH public and private key pair
+2. Paste the public key into Github settings so Github can verify the connection requests from your machine (This is similar to public key signings in a wallet)
+
+In order to do this, please follow [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) guide. After you have done the setup 
+
 ### Snapshot setup and DAO fundamentals
 
 ### Web Development Exercise
