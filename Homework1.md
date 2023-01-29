@@ -14,7 +14,7 @@ Note, test funds are capped to regulate supply and prevent abuse. Try to request
 
 ### Github online and local setup
 
-Github is a cloud hosting platform for Git repositories. **Git** is the version control technology powering open source through version control and contribution techniques. There are many enterprise solutions to Github like Gitlab and Bitbucket. These solutions tend to add in enterprise features such as deployment pipelines and project management features. Ever since Github was acquired by Microsoft in 2018, Github has also gained many new enterprise features as well as a gamification aspect with badges.
+Github is a cloud hosting platform for Git repositories. **Git** is the actual technology powering open source through version control and contribution techniques. There are other enterprise solutions to Git outside of Github like Gitlab and Bitbucket. These solutions tend to add in enterprise features such as deployment pipelines and project management features. Ever since Github was acquired by Microsoft in 2018, Github has also gained many new enterprise features as well as a gamification aspect with badges.
 
 ##### Git online setup
 
@@ -25,22 +25,54 @@ As time goes on and your projects become more complex, you will need to move Git
 ##### Git local setup and CLI commands
 
 The most fundamental commands any Github user needs to master is:
-1. Connect your local machine to Github
-2. How to clone a respository from online to your local machine
-3. How to add and commit the changes locally
-4. How to push the changes you made locally back up into the cloud for public consumption
+1. Install Git on your local machine
+2. Connect your local machine to Github
+3. How to clone a respository from online to your local machine
+4. How to add and commit the changes locally
+5. How to push the changes you made locally back up into the cloud for public consumption
 
 These commands are the basics for when you are working alone. Once collaboration starts, branching, pull requests and resolving merge conflicts becomes important and will be covered in a later homework.
 
-**Note for Windows users:** Powershell and Bash is difficult and cumbersome to use. Whereas Mac and all Linux based machines can simply open a terminal and type in [well documented and standardized](https://man7.org/linux/man-pages/dir_section_1.html) Linux commands, Windows users have to learn a whole different set of commands and argument inputs. This is another use case of why privatization is restrictive as compared to open standards. For Windows users, **please [download](https://learn.microsoft.com/en-us/windows/wsl/install) WSL**. This simulates a Linux kernel on top of your Powershell and allows you to use the same commands as shown below. After a successful installation try to type in wsl into the Powershell and you should see something like this:
+**Note for Windows users:** Powershell and Bash is difficult and cumbersome to use. Whereas Mac and all Linux based machines can simply open a terminal and type in [well documented and standardized](https://man7.org/linux/man-pages/dir_section_1.html) Linux commands, Windows users have to learn a whole different set of commands and argument inputs. This is another use case of why privatization is restrictive as compared to open standards. For Windows users, **please [download](https://learn.microsoft.com/en-us/windows/wsl/install) WSL**. This simulates a Linux kernel on top of your Powershell and allows you to use the same commands as shown below. After a successful installation try to type in wsl into the Powershell and you should see something like this:  
 
+<img width="241" alt="Screenshot_20230129_101643" src="https://user-images.githubusercontent.com/121296124/215317162-35e88f8d-c281-4be7-a310-1297d866bfcc.png">
 
-###### 1. Connect your local machine to Github
+After you have done the setup, note that the blue section is your original system but the green section is where this simulated Linux environment is running. The point at which this environment is being created is called the mounting point and denoted by "mnt".
+
+###### 1. Install Git
+
+[Install](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) Git on your computer to start using its functionalities. Windows users, do this after you are inside the WSL environment so you can install with Linux commands.
+
+###### 2. Connect your local machine to Github
+
 Oringally, this setup could be completely skipped because it was done over https. Given he numerous insecurities surrounding https, Github has now moved onto SSH connections. You can still pull stuff down from online to local machine via https but pushing things upstream (a fancy way of saying putting your work online again), is no longer supported via https. Therefore we need to:
 1. Generate a local SSH public and private key pair
 2. Paste the public key into Github settings so Github can verify the connection requests from your machine (This is similar to public key signings in a wallet)
 
-In order to do this, please follow [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) guide. After you have done the setup 
+In order to do this, please follow [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) guide.
+
+###### 3. Clone a respository from online to your local machine
+
+The act of copying repositories from Github online to your local machine is called cloning. To do this, first setup a folder somewhere on your laptop (for easy access, make a new folder on your Desktop). Then head over to your Github account, at this point, you should have 1 repository - the class website that you forked. Click into the website, locate the green code button on the top right, click on it and choose the SSH tab. Click the button on the right of the generate line to copy the entire line.
+
+<img width="340" alt="Screenshot_20230129_104229" src="https://user-images.githubusercontent.com/121296124/215318353-e9ce33e8-f88c-42a4-b30c-5a67b86296e2.png">
+
+Now open the terminal, or Powershell plus wsl command, and navigate to the folder you created. To navigate, use the command "cd" + path name. On my machine, I created a folder called "Dauphine Digital Economics" on the Desktop so my "cd" command looks like:
+    cd Desktop/Dauphine\ Digital\ Economics/
+Confirm that you are in the correct folder by checking if the path is now incorporated into your displayed path
+
+<img width="497" alt="Screenshot_20230129_104607" src="https://user-images.githubusercontent.com/121296124/215318343-c6c130b8-041f-4bd9-8686-b11c9ea110ea.png">
+
+Now that you are in the correct folder, type "git clone " and then paste in what you copied from the online Github repository. It should follow this format
+    git clone git@github.com:[account name]/[respoitory name].git
+Now confirm that the clone has been successful by typing "ls" into the CLI. Your repository should now be listed. Alternatively, you can click on the folder you made and check if the project is now in there visually.
+
+###### 4. Add, Commit, Push
+
+Whenever you have made a block of changes and feel like you have reached a logic point of changes locally, use "git add ." to stage those changes. Staging means your changes are temporarily saved. Once you feel like your work is of a publishable quality you can commit your code. A commit packs all the adds that have been staged and compiles them into a hash and timestamp. Finally call "git push" to upload your work online. The work flow would liike something like below
+    git add .
+    git commit -m "write a message telling people what this commit is about"
+    git push
 
 ### Snapshot setup and DAO fundamentals
 
