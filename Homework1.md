@@ -4,7 +4,15 @@ The first week will focus on setting up necessary software for the course and pr
 
 ### MetaMask Setup
 
-### Github Overview and local setup
+Since MetaMask is both a wallet and a provider, it allows for easy web3 development. A quality of MetaMask is that it is designed to be device first and not user first. This means that for every platform (even different browsers n the same devicce) you install MetaMask, you will receive a new Secret Recovery Phrase and set a new password. Keep the Recovery phrases safe and never share it under any condition to prevent the [loss of funds](https://www.cnbc.com/2017/12/20/man-lost-127-million-worth-of-bitcoins-and-city-wont-let-him-look.html).
+
+After a MetaMask wallet has been setup, experiment with setting up different accounts and networks. MetaMask is not only able to have multiple accounts, for testing and real fund management, but each account is able to hold different currencies through switching the network. 
+
+We will be needing test funds to enable deploying on the Goerli testnet of Ethereum. Go ahead and get some funds from the Goerli faucet [here](https://goerlifaucet.com/). You will notice that in order to get test funds, it is required to have an [Alchemy account](https://www.alchemy.com/). This is quite a tactical partnership to increase user base fast. Create an Alchemy account, and take a look at their offerings if you like (they have great educational content if things are going too fast in class). Head back to the Goerli faucet and plug in your MetaMask account address and receive some funds!
+
+Note, test funds are capped to regulate supply and prevent abuse. Try to request one or two times more to make sure you have enough for the semester.
+
+### Github online and local setup
 
 ### Snapshot setup and DAO fundamentals
 
