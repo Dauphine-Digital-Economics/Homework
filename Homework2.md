@@ -16,7 +16,7 @@ The function should take in a string, split it into an Array, and then evaluate 
 
 Masking is an incredibly useful concept that is applied widely in many areas of technology. One of the most common use is [Subnet Masking](https://avinetworks.com/glossary/subnet-mask/). This is how IP addresses are assigned globally. For this exercise, we will use a bit-shifted mask to grab each bit. Your function should take in an uint8 and return an array of integers, that when added together, will give you the number you originally input to the function.
 
-For example, if the input is 13, then the resulting array should be [1,0,4,12].
+For example, if the input is 13, then the resulting array should be [1,0,4,8].
 
 ###### Boolean Algebra
 
