@@ -22,9 +22,9 @@ For example, if the input is 13, then the resulting array should be [1,0,4,8].
 
 Solidity is able to perform operations on bits. If we think of 1 as true and 0 as false, we can derive the following truth table when comparing two bits (A, B):
 
-AND (&) - Both A and B have to true (1) to be true.
-OR (|) - When A is true or B is true, the whole statement is true
-NOT (!) - flips the bit.
+* AND (&) - Both A and B have to true (1) to be true.
+* OR (|) - When A is true or B is true, the whole statement is true
+* NOT (!) - flips the bit.
 
 A mask uses all zeros except the relevant portion which is a one. If we perform an AND operation on the original binary number and the mask, every bit in the binary number will become 0 except for the relevant portion.
 
@@ -62,5 +62,5 @@ For our first contract, start a file called "Engine.sol". Inside this contract w
 
 For the second contract, let's call it "Game.sol". It should inherit from Engine. It will have one function which takes in the user input, generate two random numbers (use [this](https://www.geeksforgeeks.org/random-number-generator-in-solidity-using-keccak256/) method), calls the function you wrote in the first contract, compare the function result and user input and finally return a boolean - true if the user guessed correct and false if the user guess wrong.
 
-##### The front end
+##### Optional: The front end
 Since this is not a web development development course, it is enough to create a button element that, when pressed, pops up a notification of if the user guessed correctly or not. Hint: use alert(); for simple notifications. However, if you would like to to give your website a web3 game feel, you are free to add any additional visual elements. The important thing is that you are able to connect the front end to the smart contract.
