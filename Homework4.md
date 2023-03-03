@@ -1,4 +1,4 @@
-# Homework 4 - Hardhat Deployments, NFTs and DAO Proposal
+# Homework 4 - Hardhat Deployments and DAO Proposal
 
 As we begin the second half of the course, we will shift away from theory and into real world web3 applications. This homework is divided into 2 parts - technical and community. 
 
@@ -20,12 +20,63 @@ Writing tests is incredibly important. There are different categories of testing
 
 1. Fork the example Hardhat [project](https://github.com/Dauphine-Digital-Economics/Hardhat-Gambling) into your own Github
 2. Git clone your forked project onto your local machine
-3. Remove the Game and Engine files in the Contracts folder and replace them with your own Game and Engine files from Homework2. You may change them and fix errors if you wish.
-4. Ascertain that you can deploy it on your command line (Terminal for MacOS or WSL for Windows)
-5. Write 1 or 2 tests for each of your Solidity files.
-6. Create a README.md file and write very briefly, around 100 words, why you chose those tests.
+3. Remove the Game and Engine files in the Contracts folder and replace them with your own Game and Engine files from Homework2.
+4. Ascertain that you can deploy it on your command line (Terminal for MacOS or WSL for Windows). A successful deployment should print out the address of where it was deployed.
+5. Write 1 or 2 tests for each of your Solidity files. Remember, to test something, you need to have an expectation of the correct outcome so you may need to reduce randomness in your Game.sol file to something you can predict the outcome of.
 
-### Challenge 2 - NFT Marketplace and Celo Alfajores Deployment
+### Challenge 2 - Celo Alfajores Deployment
+
+Now that you have successfully deployed on a local, simulated blockchain, we are going to deploy on Celo Alfajores. Remember, **your final project requires deployment on Celo Alfajores.** We will need to first configure MetaMask to use the Alfajores network and then tell Hardhat about our Metamask account so the Smart Contracts have an owner.
+
+##### Configure Alfajores on Metamask
+
+1. Chose an account. You can use the existing one you have or create a brand new one.
+2. Click on the network button next to your account button and select "add network"
+3. Select "Add a netork manually" and input the fields using parameters you find on [this](https://docs.celo.org/wallet/metamask/setup) page under "Alfajores"
+      * Mainnet is Celo's Mainnet. Alfajores is for dApp and Smart Contract testing and Baklava is for Validator testing.
+4. After you have added the network, request some funds from the Celo [faucet](https://faucet.celo.org/).
+5. Wait a few minutes and confirm that you see 5 CELO in your Metamask wallet.
+
+##### Configure Hardhat and deploy your game on Alfajores
+
+Before we begin, please be aware that Hardhat requires your **private** key in order to use that account to deploy smart contracts. **Never, under any circumstance, publically reveal your private keys!!!** Github is a public platform where every person or bot can view your code. Publishing a private key on Github is like publishing your bank account password on Twitter. There are many bots out there that is dedicated to scanning Github files for accidentally pushed private keys.
+
+1. install dotenv as a node package with
+```
+npm install dotenv
+```
+2. Open the .gitignore file
+   * .gitignore is a way to ensure that the file or folder specified does not get pushed online. Use .gitignore for folders with thousands of files or files containing sensitive information.
+   * Add a comment that says Metamask private key then list the .env file. It should look like
+   ```
+   # Metamask private key
+   .env
+   ```
+   * Save and close the file.
+3. Create a new .env file and type in : PRIVATE-KEY="[insert private key here]"
+   * In order to find the private key of your Metamask account, clikc the three vertical buttons under the account button. Select Account Details and then click on the "export private key" button. You will need your Metamask password.
+4. Head over to hardh.config.js to tell Hardhat where to find Alfajores and the private key.
+   * Since we are using dotenv, Hardhat must know about it. At the top of your file, insert this require statement.
+   ```
+   require("dotenv").config({ path: ".env" });
+   ```
+   * Now add in the network details. If you are brave, try reading up [Hardhat live deployments](https://hardhat.org/tutorial/deploying-to-a-live-network) and [this](https://docs.celo.org/blog/tutorials/hardhat-and-celo-the-ultimate-guide-to-deploy-celo-dapps-using-hardhat) Celo tutorial for extra help. If you do not want to deep dive into code, add in this code after line 4:
+   ```
+   networks:{
+    alfajores: {
+    url: "https://alfajores-forno.celo-testnet.org",
+    accounts: [process.env.PRIVATE_KEY],
+    chainId: 44787,
+    }
+   }
+   ```
+   * Deploy your script with:
+   ```
+   npx hardhat run scripts/deploy.js --network alfajores
+   ```
+If you were successful, you should see the address the contracts were deployed at and if you head over to your Metamask account, you should notice that your 5 CELO has reduced slightly. This is the fee associated with deployment onchain.
+
+**Optional bonus**: Check with your classmates and see what it cost to deploy their smart contracts. Was it the same? Why do you think it was or was not the same? Write your thoughts in a README.md file.
 
 ## Impact Market DAO proposal
 
@@ -89,5 +140,3 @@ PACT is a token on the Celo Blockchain. Thus, in order to receive your token you
 **Chain ID**: 42220
 
 Now you are ready to receive PACT tokens!
-
-
