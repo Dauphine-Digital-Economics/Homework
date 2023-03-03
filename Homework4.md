@@ -6,7 +6,7 @@ For the technical aspect, you will learn to deploy onto testnet of chains as the
 
 ## Hardhat Challenge Set
 
-Hardhat offers a vastly different user experience than Remix. A nice UI (User Interface) does not necessarily mean a better experience. Seasoned developers often find that commands can be far more precisely controlled and manipulated than a button, which executes actions that are not immediately visible. 
+Hardhat offers a vastly different user experience than Remix. A nice UI (User Interface) does not necessarily mean a better experience. Seasoned developers often find that commands can be far more precisely controlled and manipulated than a GUI element like a button, which executes actions that are not immediately visible. 
 
 Consider this (unfortunately) common scenario, known as a phising attempt. You receive an email saying, very ironically, that your wallet has been hacked. It provides a link to change your seed phrase in order to "secure" your wallet. You click the link and enter your wallet seed phrase and click the submit button. It displays a message saying your seed phrase has been changed. You go back to your wallet and suddenly find that all your crypto tokens are gone. You realise that this button submits to malicious smart contracts that drain wallets. Have you checked what each button in Remix does?
 
@@ -18,7 +18,7 @@ As shown in class, deploy your Homework2 Game.sol and Engine.sol in Hardhat. The
 
 Writing tests is incredibly important. There are different categories of testing like Unit Test, Perfomance Test, Security Test, etc. For this homework, learn how to write a simple Hardhat test. Hint: import the package called Chai. Perform the following steps:
 
-1. Fork the example Hardhat project into your own Github
+1. Fork the example Hardhat [project](https://github.com/Dauphine-Digital-Economics/Hardhat-Gambling) into your own Github
 2. Git clone your forked project onto your local machine
 3. Remove the Game and Engine files in the Contracts folder and replace them with your own Game and Engine files from Homework2. You may change them and fix errors if you wish.
 4. Ascertain that you can deploy it on your command line (Terminal for MacOS or WSL for Windows)
