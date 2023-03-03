@@ -53,7 +53,7 @@ npm install dotenv
    .env
    ```
    * Save and close the file.
-3. Create a new .env file and type in : PRIVATE-KEY="[insert private key here]"
+3. Create a new .env file and type in : PRIVATE_KEY="[insert private key here]"
    * In order to find the private key of your Metamask account, clikc the three vertical buttons under the account button. Select Account Details and then click on the "export private key" button. You will need your Metamask password.
 4. Head over to hardh.config.js to tell Hardhat where to find Alfajores and the private key.
    * Since we are using dotenv, Hardhat must know about it. At the top of your file, insert this require statement.
