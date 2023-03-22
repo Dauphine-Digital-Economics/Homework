@@ -16,15 +16,15 @@ DevOps concerns the successful delivery of a software project through all the st
 
 ##### Design and Team Management
 
-Each project starts with a general design stage where technical, personnel and financial considerations are made. We can disregard the financial considerations for this homework since we are not constrained by budget. For the personnel considerations, you must make the best decision for your two teams in terms of skills, the wants and skill level of the developers, weighed against to the difficulty of the tasks. The initial suggested team composition is based on the past performances in the homeworks but you are free to reassign teams members or they may petition you for a change. The technical tasks described in the sections below may not be changed.
+Each project starts with a general design stage where technical, personnel and financial considerations are made. We can disregard the financial considerations for this homework since we are not constrained by budget. For the personnel considerations, you must make the best decision for your two teams in terms of skills, the wants and skill level of the developers, weighed against to the difficulty of the tasks. The initial suggested team composition is based on the past performances in the homeworks but you are free to reassign members to different teams as the workload demands or they may petition you for a change. The technical tasks described in the sections below may not be changed.
 
-The technical considerations are incredibly important at the start of any software project. For DAOs, the governance process that is implemented must match the token type. For example, implementing an ERC 721 NFT is very limiting if you are doing onchain voting because they cannot be divided into smaller quantities and easily distributed. They may be suitable for offchain voting since you can have a different token offchain and only a few people pushing the aggregated proposal results onchain but that will create a lot of integration work for the governance team. Of course, you can simply choose to put all the capable developers into the governance team in this scenario, it is a balance between technical design and developer skill.
+The technical considerations are incredibly important at the start of any software project. For DAOs, the governance process that is implemented must match the token type. For example, implementing an ERC 721 NFT is very limiting if you are doing onchain voting because they cannot be divided into smaller quantities and easily distributed. You can use mixed token or voting strategies to get around this limitation, but an NFT token must be used in some way.
 
 You must organise a design meeting with the class to discuss the design considerations. You may do this synchronously via a in person or online meeting or asynchronously via a poll on Snapshot or have everyone submit their thoughts and opinions to you. **Whatever the method, you must produce a design document, named "design.md" in the root folder of the class repository which details the decisions you came to and the reasoning behind these decisions.**
 
 To help you structure your document, design.md can contain the following sections
 
-* Technical Specifications
+* Technical Specifications (You may ask the two development teams to fill in this section or do it yourself)
   * Chosen token standard
   * Chosen governance process model
 * Development Process
@@ -38,9 +38,9 @@ You are responsible for testing of the work produced by the two teams as well as
 Consider this scenario, you have the initial design meeting, wait for the two teams to finish their work, you write some tests and realise things don't work and now you need to ask the developers to fix their work, all the while, the two week deadline is approaching. This linear way of working involves a lot of waiting. You could alternatively agree at the design meeting that each team will write smart contracts with specific function names and expected function behaviour, producing certain specific results. While the developers are writing their code, you can write the tests at the same time, ready for immediate testing upon code completion and final deployment.
 
 Please write **3** tests:
-1. Unit test - function from the token contract
-2. Unit test - function from the governance contract
-3. Function test - test a user action (Example: submitting a proposal or voting on a proposal or dsitrbuting voting tokens)
+1. Unit test - function from the token team's contract
+2. Unit test - function from the governance team's contract
+3. Non-functional test - simulate a user action or do a gas test (Hardhat has a [gas reporter](https://hardhat.org/hardhat-runner/docs/guides/test-contracts))
 
 **In addition to providing the test scripts and deployment to Celo Alfajores, the DevOps team must also deliver a README.md file** README files are the lifeblood of open source development. Seasoned developers will sometimes completely disregard a project if there is no README file present. An example of a good README file, see [this](https://github.com/PatrickAlphaC/dao-template) DAO project.
 
@@ -49,32 +49,47 @@ To reduce the amount of work, follow this simple README structure:
 * Installation and Execution
   * How to download and install the project (at the very least need npm and hardhat)
   * Tests available (tiny 20 word description of each of the three tests) and how to run test (very easy, it's npx hardhat test)
-  * How to deploy and interact with DAO
+  * Address of DAO on Alfajores
 
 ### Governance Token
 
 Tokens in DAOs may have one or more uses. Most simply, it is used as a representation of voting power. Some organisations also have additional offerings for their tokens such as allowing it to be traded on an exchange or yield farming programs that allows the generation of interest returns. You are resposible for the lifecycle of the token and how it is used. This begins with how the token is created and how interested members can get a share of this token. More importantly, who controls this process. Hint, the Openzeppelin "Ownable" contract is one of the most widely used contracts.
 
-The example DAO project on our class Github shows the use of an ERC20 token as the governance token used for voting. Your job is to use a NFT token instead. This will change voting dynamics and how your tokens are minted, distributed and tracked. Thinking about what token you will be designing. Some viable examples:
+The example DAO project on our class Github shows the use of an ERC20 token as the governance token used for voting. Your job is to use a NFT token instead. This will change voting dynamics and how your tokens are minted, distributed and tracked. Thinking about what token you will be designing and how voting power is associated with the token. Some viable examples:
 
 * ERC721 with Vote functionalities - The oldest form of NFT tokens.
-* ERC1155 - New token standard not covered in class but allows a mix of fungible and non-fuungible tokens. They allow innovations lie fractional NFTs.
+* ERC1155 - New token standard not covered in class but allows a mix of fungible and non-fungible tokens. They allow innovations like fractional NFTs.
 * More than one token - you may use a combination of tokens for different areas of the governance process, eg. NFT allows voting rights to certain categories of proposals but use normal ERC20 token to vote.
 
-From the last option, it is clear that the token strategy must align with the Governance Model implementation. You may discuss this with the Governance Model team, ask the DevOps team for direction or any other strategy which enables a cohesive technical strategy.
+Whatever the option, it is clear that the token strategy must align with the Governance Model implementation. You must discuss this with the Governance Model team on how your tokens are counted as votes. Ask the DevOps team for management or any other strategy which enables a cohesive technical strategy.
 
 ### Governance Model
 
-The governance model determines how proposals are made and votes are casted. In certain DAOs, especially ones dealing in stablecoins, proposals have different urgency and consequences. Remember in Lecture 7 where MakerDAO allowed the community to vote on Black Thursday victim compensation, resulting in a $28 Million, 3 year lawsuit? Governance strategies involve thinking about regulating who can vote, how votes are cast, time periods of the voting process and tools used to cast the vote.
+The governance model determines how proposals are made and votes are casted. In certain DAOs, especially ones dealing in stablecoins, proposals have different urgency and consequences. Remember in Lecture 7 where MakerDAO allowed the community to vote on Black Thursday victim compensation, resulting in a $28 Million, 3 year lawsuit? Governance strategies involve thinking about regulations of who can vote, how votes are casted and counted, time periods of the voting process and tools used to cast the vote.
 
-Let's simply allow everyone to vote, the biggest considerations here will be Vote platform, time locks and proposal structures.
+Let's simply allow everyone to vote, your job is to design a simple onchain voting system so that you can:
 
-##### Voting Platforms
+1. Cast a proposal
+2. Allow people with the correct tokens to vote on the proposal
+3. Decide what the voting mechanism is (Simple transfer of a quanity of tokens, voting power calculation, time controlled, etc)
+4. Set a quorum to decide how a proposal passes or fails
+5. Update the state of the proposal (No need for execution, a simple get proposal status function is enough)
 
-You can chose to do everything onchain and in code. This will mean a rather large smart contract detailing vote parameters like time frame and quorum limits. you may generate this with the OpenZeppelin Contracts Wizard and add in custom functionality to make it work with Token team's token. The example in the class Github is an onchain voting example.
+##### Governance contract overall structure
 
-Alternatively, you choose an offchain voting tool like Snapshot. The project will then change significantly and become integration heavy. You will need to figure out how to use Token team's custom token with Snapshot for example. This will also increase DevOps team job of writing a functional test since they now need to figure out how to incorporate something offchain into their javascript code. If you read the DevOps section, you will notice that they have the power to reassign team members, so consider carefully how your choices impact other teams.
+You can fit everything into one smart contract or separate each component into multiple contract for readability. The two components necessary are:
 
-##### Governance contract elements
+1. Core Governance Contract - manages the full proposal lifecycle.
+  * Proposal Creation - how can people create a proposal? Who can create a proposal?
+  * Proposal Voting - managed by the Voting Contract but must be called in the Governance Contract
+  * Quorum - How is the success of a proposal determined?
+  * Status - How can people check the status of a certain proposal amoungst a multitude of proposals?
+2. Voting Contract - how are votes cast? Is it a simple yes or no or voters can deposit a certain amount of tokens? This contract requires close discussion with the Token team.
 
-Timelocks and the proposal structure are components which should be matched to specific purpose of the DAO. For example, if you chose to implement a very long timelock, then the decisions you your making cannot ever be urgent decisions like the stablecoin market is crashing, do we do an emergency shutdown. Or if you chose a simple token amount voting method where the proposal with highest token amount wins, remember there are flashloan attacks where someone can borrow a few million of your token, vote, and then dump everything once the voting period has ended. You do not have to prevent every attack vector, but you should note your thought process and choices in the design.md document that DevOps team is respnsible for. 
+##### The Proposal struct
+
+Your proposal will be stored onchain as a global proposal struct. Think about what needs to be in this Solidity Struct. The eact parameters depends on th voting mechanism but some absolute necessities to get you started:
+
+* ProposalId - So that you have a way of referencing the proposal, but think about how this ID will be generated. Openzeppelin uses a hash function, you can do something simpler
+*  Proposal state - Failed, Passed or In Progress?
+*  Description - what is actually being proposed
