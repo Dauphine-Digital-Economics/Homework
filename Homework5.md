@@ -1,10 +1,6 @@
 # Homework 5 - NFT DAO and SDLC
 
-We will create a Decentralized Autonomous Organisation (DAO )through a simplified Software Development Lifecycle (SDLC). This project will be done as a class effort and you wil be graded on a team score and an overall class score. The repositroy where all collaboration and coding work will happen is the class Github. We will have the following teams:
-
-* Developer Operations Team - Cédric, Yichen, Yanming
-* Governance Token Team - Aizhan, Laetitia, Margot
-* Governance Model Team - Léa, Valentin, Jiawei
+We will create a Decentralized Autonomous Organisation (DAO )through a simplified Software Development Lifecycle (SDLC). This project will be done as a class effort and you wil be graded on a team score and an overall class score. The repositroy where all collaboration and coding work will happen is the class Github.
 
 Please read the section relevant to your role below. However, reading other sections will help you gain a wider perspective of the project as a whole so your are able to anticipate their work and minimise merge conflicts.
 

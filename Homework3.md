@@ -2,14 +2,6 @@
 
 In this Homework, we will focus on moving towards collaboration on Github. To simplify the process, we will only work on 1 file. You will be graded mainly on the quality of your research paper, but a brief examination of your commit histories, comments, PRs, will also be made.
 
-Since we are simulating a collaboration, here are your groups:
-
-**Group 1: Cédric, Yichen, Laetitia**
-
-**Group 2: Yanming, Aizhan, Valentin**
-
-**Group 3: Margot, Léa, Jiawei**
-
 ### Advanced AMM models and Markdown files
 
 Write a 750 word paper on an AMM model which combines oracles and traditional models and evaluate a protocol using this model. Some examples:
