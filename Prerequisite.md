@@ -9,6 +9,8 @@ Gather Town is of the earlier Metaverse projects that attempts to provide compos
 
 Please note, due to the built in zoning feature, you must come inside the lecture table area to be able to hear and see the course content. Similarly, if you wish to have a private discussion, you can use the smaller discussion spaces around the tables on the upper right corner.
 
+<img width="421" alt="Screenshot 2024-01-09 140355" src="https://github.com/Dauphine-Digital-Economics/Homework/assets/121296124/a3598b4e-ad98-428b-96b4-7aba16b5159d">
+
 ##### Discord
 
 As a nascent technology, success in Web3 relies on maintaining the most up-to-date state of each project. Token prices can fluctuate wildly, new regulations are always on the horizon and most importantly, as developers, the technology is constantly in a state of evolution. Discord serves as the community exchange platform for almost all projects. In this course, Discord will be used for announcements and other casual communications outside of formal emails where you will receive feedback and grades. Please join the class Discord [here](https://discord.gg/59WZQwwtyh).
@@ -22,7 +24,7 @@ Given the anonymous nature of these votes and the dangers of collusion in small 
 
 For further instructions around weekly presentations, please refer to the Presentations repository.
 
-To start, please join the DAO [here](https://demo.snapshot.org/#/dauphine.eth). To join and vote, you must have a MetaMask wallet because all activities are signed with your wallet's public key. You will see there is a proposal already up asking about your sentiment towards this course. *One bonus point will be added to your homework 1 for participating in this preliminary proposal.*
+To start, please join the DAO [here](https://demo.snapshot.org/#/dauphine.eth). To join and vote, you must have a MetaMask wallet because all activities are signed with your wallet's public key. You will see there is a proposal already up asking about your sentiment towards this course. **One bonus point will be added to your homework 1 for participating in this preliminary proposal.**
 
 ### Development Environment Setup
 
@@ -31,6 +33,8 @@ To start, please join the DAO [here](https://demo.snapshot.org/#/dauphine.eth). 
 The IDE we will be using in this course is [VSCode](https://code.visualstudio.com/Download). It is a lightweight version of the popular Microsoft Visual Studio software. Web3 favours VSCode as the IDE of choice and therefore, many custom extensions have been developed specifically for web3 development.
 
 One such extension is the Solidity Syntax Highlighter. A syntax hightlighter is what gives code colour and makes it visually pleasing. Without going into too many details, all programming languages are created with the CPU structure and coding practices in mind. Therefore, good syntax highlighters help you clearly see variables, functions and other logical building blocks in your code. Please click on the Marketplace tab after installing VSCode and search for the **Solidity + Yul Semantic Syntax** extension and install it in your VSCode.
+
+<img width="702" alt="Syntax Highlighter" src="https://github.com/Dauphine-Digital-Economics/Homework/assets/121296124/6b669d61-2896-4b5a-9aa6-627e8628f89f">
 
 ##### MetaMask Setup
 
@@ -57,9 +61,9 @@ As time goes on and your projects become more complex, you will need to move Git
 The most fundamental commands any Github user needs to master is:
 1. Install Git on your local machine
 2. Connect your local machine to Github
-3. How to clone a respository from online to your local machine
-4. How to add and commit the changes locally
-5. How to push the changes you made locally back up into the cloud for public consumption
+3. Clone a respository from online to your local machine
+4. Add and commit the changes locally
+5. Finally, push the changes you made locally back up into the cloud for public consumption
 
 These commands are the basics for when you are working alone. Once collaboration starts, branching, pull requests and resolving merge conflicts becomes important and will be covered in a later homework.
 
@@ -83,26 +87,32 @@ In order to do this, please follow [this](https://docs.github.com/en/authenticat
 
 ###### 3. Clone a respository from online to your local machine
 
-The act of copying repositories from Github online to your local machine is called cloning. To do this, first setup a folder somewhere on your laptop (for easy access, I suggest your Desktop). Then head over to your Github account, at this point, you should have the class repository you forked. Click into the website, locate the green code button on the top right, click on it and choose the SSH tab. Click the button on the right of the generate line to copy the entire line.
+The act of copying repositories from Github online to your local machine is called cloning. To do this, first setup a folder somewhere on your laptop (for easy access, I suggest your Desktop). Then head over to your Github account and click into the "Homework" repository. Once you are in the repository, locate the green code button on the top right, click on it, and choose the SSH tab. Click the button on the right of the generate line to copy the entire line.
 
 <img width="340" alt="Screenshot_20230129_104229" src="https://user-images.githubusercontent.com/121296124/215318353-e9ce33e8-f88c-42a4-b30c-5a67b86296e2.png">
 
 Now open the terminal, or Powershell plus wsl command, and navigate to the folder you created. To navigate, use the command "cd" + path name. On my machine, I created a folder called "Dauphine Digital Economics" on the Desktop so my "cd" command looks like:
-    cd Desktop/Dauphine\ Digital\ Economics/
+```
+cd Desktop/Dauphine\ Digital\ Economics/
+```
 Confirm that you are in the correct folder by checking if the path is now incorporated into your displayed path
 
 <img width="497" alt="Screenshot_20230129_104607" src="https://user-images.githubusercontent.com/121296124/215318343-c6c130b8-041f-4bd9-8686-b11c9ea110ea.png">
 
 Now that you are in the correct folder, type "git clone " and then paste in what you copied from the online Github repository. It should follow this format
-    git clone git@github.com:[account name]/[respository name].git
+```
+git clone git@github.com:[account name]/[respository name].git
+```
 Now confirm that the clone has been successful by typing "ls" into the CLI. Your repository should now be listed. Alternatively, you can click on the folder you made and check if the project is now in there visually.
 
 ###### 4. Add, Commit, Push
 
-Whenever you have made a block of changes and feel like you have reached a logic point of changes locally, use "git add ." to stage those changes. Staging means your changes are temporarily saved. Once you feel like your work is of a publishable quality you can commit your code. A commit packs all the adds that have been staged and compiles them into a hash and timestamp. Finally call "git push" to upload your work online. The work flow would liike something like below
-    git add .
-    git commit -m "write a message telling people what this commit is about"
-    git push
+Whenever you have made a block of changes and feel like you have reached a logic point of changes locally, use "git add ." to stage those changes. Staging means your changes are temporarily saved. Once you feel like your work is of a publishable quality you can commit your code. A commit packs all the adds that have been staged and compiles them into a hash and timestamp. Finally call "git push" to upload your work online. The work flow would look approximately like:
+```
+git add .
+git commit -m "write a message telling people what this commit is about"
+git push
+```
 
 ##### Foundry Toolchain
 Finally, we come to the software that enables blockchain development itself - the Foundry Toolchain. Bookmark the [Foundry Book](https://book.getfoundry.sh/), it contains all commands to enable the full software development lifecycle.
