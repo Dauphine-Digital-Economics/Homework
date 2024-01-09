@@ -1,0 +1,116 @@
+# Prerequisite - Class tooling and development environment Setup
+
+The first week will focus on setting up necessary software for the course. All platforms were chosen to provide a demonstration of working in a Web 3 environment. Additionally, we will setup the necessary software for a Solidity focused development environment.
+
+### Class Tooling
+##### Gather Town
+
+Gather Town is of the earlier Metaverse projects that attempts to provide composable components inside of a virtual meeting. These components may be anything ranging from interactive games, built-in shared whiteboarding to dedicated break out spaces. Our classes will be held at [this location](https://app.gather.town/app/bOFt4eJwDG85V9qk/Dauphine%20Solidity%20Course).
+
+Please note, due to the built in zoning feature, you must come inside the lecture table area to be able to hear and see the course content. Similarly, if you wish to have a private discussion, you can use the smaller discussion spaces around the tables on the upper right corner.
+
+##### Discord
+
+As a nascent technology, success in Web3 relies on maintaining the most up-to-date state of each project. Token prices can fluctuate wildly, new regulations are always on the horizon and most importantly, as developers, the technology is constantly in a state of evolution. Discord serves as the community exchange platform for almost all projects. In this course, Discord will be used for announcements and other casual communications outside of formal emails where you will receive feedback and grades. Please join the class Discord [here](https://discord.gg/59WZQwwtyh).
+
+##### Snapshot
+Snapshot is an off-chain (aka: no additional gas fees) voting mechanism that can allow DAOs and protocol to get a feel of the community sentiment before making an official onchain proposal. We will be using the demo version of [this](https://demo.snapshot.org/#/) platform to vote on the grade for the weekly presentations. The DAO is set up so that only authors can post proposals. Therefore, if it is your week to present, please send your wallet address to the professor privately over the class Discord. For the rest of the class, when you are voting, please include some comment reasoning for your grade.
+
+Given the anonymous nature of these votes and the dangers of collusion in small communities, the following veto rules are in place:
+1. You cannot vote for yourself. If there are more than n-2 amount of votes for any presentation, votes do not count for that presentation.
+2. If the general consensus is far from the professor assessment AND there are no comments attached to the vote explaining the grade, votes are vetoed.
+
+For further instructions around weekly presentations, please refer to the Presentations repository.
+
+To start, please join the DAO [here](https://demo.snapshot.org/#/dauphine.eth). To join and vote, you must have a MetaMask wallet because all activities are signed with your wallet's public key. You will see there is a proposal already up asking about your sentiment towards this course. *One bonus point will be added to your homework 1 for participating in this preliminary proposal.*
+
+### Development Environment Setup
+
+##### VSCode IDE Installation
+
+The IDE we will be using in this course is [VSCode](https://code.visualstudio.com/Download). It is a lightweight version of the popular Microsoft Visual Studio software. Web3 favours VSCode as the IDE of choice and therefore, many custom extensions have been developed specifically for web3 development.
+
+One such extension is the Solidity Syntax Highlighter. A syntax hightlighter is what gives code colour and makes it visually pleasing. Without going into too many details, all programming languages are created with the CPU structure and coding practices in mind. Therefore, good syntax highlighters help you clearly see variables, functions and other logical building blocks in your code. Please click on the Marketplace tab after installing VSCode and search for the **Solidity + Yul Semantic Syntax** extension and install it in your VSCode.
+
+##### MetaMask Setup
+
+Since MetaMask is both a wallet and a provider, it allows for easy web3 development. A quality of MetaMask is that it is designed to be device first and not user first. This means that for every platform (even different browsers in the same devicce) you install MetaMask, you will receive a new Secret Recovery Phrase and set a new password. Keep the Recovery phrases safe and never share it under any condition to prevent the [loss of funds](https://www.cnbc.com/2017/12/20/man-lost-127-million-worth-of-bitcoins-and-city-wont-let-him-look.html).
+
+After a MetaMask wallet has been setup, experiment with setting up different accounts and networks. MetaMask is not only able to have multiple accounts, for testing and real fund management, but also each account is able to hold different currencies through switching the network. 
+
+We will be needing test funds to enable deploying on the Sepolia testnet of Ethereum. [Here](https://faucetlink.to/sepolia) is a list of faucets where you can request funds.
+
+I suggest using Alchemy. You will notice that in order to get test funds, it is required to have an Alchemy account and there is a cap on the amount and frequency of testnet tokens requested. The prior requirement onboards anyone interested in Ethereum into Alchemy and the latter restriction is a supply management mechanism. Wise business decision making on Alchemy's part. Of course, you can still get around the cap by requesting from different faucets in the list.
+
+##### Github online and local setup
+
+Github is a cloud hosting platform for Git repositories. **Git** is the actual technology powering open source through version control and contribution techniques. There are other enterprise solutions to Git outside of Github like Gitlab, SVN, Bitbucket and more. These solutions tend to add in enterprise features such as deployment pipelines and project management features. Ever since Github was acquired by Microsoft in 2018, Github has also gained many new enterprise features as well as a gamification aspect with badges.
+
+##### Git - Online setup
+
+At the start of the course, it is totally possible to use Github solely through their online interface. If you have not yet, create your own Github account and then star the [class respository](https://github.com/Dauphine-Digital-Economics) in order to receive updates directly in your email. The updates are sent to the email you registered your account with so please sign up using your Dauphine email.
+
+As time goes on and your projects become more complex, you will need to move Git capabilities to your local machine. This can be achieved either through a chosen IDE, for exmaple VSCode has [Github integration](https://code.visualstudio.com/docs/sourcecontrol/github), which you use to write your smart contracts or you can go completely old school and use the command line interfact (CLI). This course encourages CLI usuage because having a terminal is ubiquitous on every machine, and we do not forget the early days of computer history where graphics did not exist and it was simply typing commands into a black screen.
+
+##### Git - Local setup and CLI commands
+
+The most fundamental commands any Github user needs to master is:
+1. Install Git on your local machine
+2. Connect your local machine to Github
+3. How to clone a respository from online to your local machine
+4. How to add and commit the changes locally
+5. How to push the changes you made locally back up into the cloud for public consumption
+
+These commands are the basics for when you are working alone. Once collaboration starts, branching, pull requests and resolving merge conflicts becomes important and will be covered in a later homework.
+
+**Note for Windows users:** Powershell is strenuous to master. Mac and other Linux based users can simply open a terminal and type in [well documented and standardized](https://man7.org/linux/man-pages/dir_section_1.html) Linux commands, but Windows users have to learn a whole different set of commands and argument inputs. This is an argument of why privatization is restrictive as compared to open standards. For Windows users, **please [download](https://learn.microsoft.com/en-us/windows/wsl/install) WSL**. This simulates a Linux kernel inside of your Powershell and allows you to use the same commands as shown below. After a successful installation try to type in wsl into the Powershell and you should see something like this:  
+
+<img width="241" alt="Screenshot_20230129_101643" src="https://user-images.githubusercontent.com/121296124/215317162-35e88f8d-c281-4be7-a310-1297d866bfcc.png">
+
+After you have done the setup, note that the blue section is your original system but the green section is where this simulated Linux environment is running. The point at which this environment is being created is called the mounting point and denoted by "mnt".
+
+###### 1. Install Git
+
+[Install](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) Git on your computer to start using its functionalities. Windows users, do this after you are inside the WSL environment so you can install with Linux commands.
+
+###### 2. Connect your local machine to Github
+
+Oringally, this setup could be completely skipped because it was done over https. Given the numerous insecurities surrounding https, Github has now moved onto SSH connections. You can still pull stuff down from online to local machine via https but pushing things upstream (a fancy way of saying publishing your work online), is no longer supported via https. Therefore we need to:
+1. Generate a local SSH public and private key pair
+2. Paste the public key into Github settings so Github can verify the connection requests from your machine (This is similar to public key signings in a wallet)
+
+In order to do this, please follow [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) guide.
+
+###### 3. Clone a respository from online to your local machine
+
+The act of copying repositories from Github online to your local machine is called cloning. To do this, first setup a folder somewhere on your laptop (for easy access, I suggest your Desktop). Then head over to your Github account, at this point, you should have the class repository you forked. Click into the website, locate the green code button on the top right, click on it and choose the SSH tab. Click the button on the right of the generate line to copy the entire line.
+
+<img width="340" alt="Screenshot_20230129_104229" src="https://user-images.githubusercontent.com/121296124/215318353-e9ce33e8-f88c-42a4-b30c-5a67b86296e2.png">
+
+Now open the terminal, or Powershell plus wsl command, and navigate to the folder you created. To navigate, use the command "cd" + path name. On my machine, I created a folder called "Dauphine Digital Economics" on the Desktop so my "cd" command looks like:
+    cd Desktop/Dauphine\ Digital\ Economics/
+Confirm that you are in the correct folder by checking if the path is now incorporated into your displayed path
+
+<img width="497" alt="Screenshot_20230129_104607" src="https://user-images.githubusercontent.com/121296124/215318343-c6c130b8-041f-4bd9-8686-b11c9ea110ea.png">
+
+Now that you are in the correct folder, type "git clone " and then paste in what you copied from the online Github repository. It should follow this format
+    git clone git@github.com:[account name]/[respository name].git
+Now confirm that the clone has been successful by typing "ls" into the CLI. Your repository should now be listed. Alternatively, you can click on the folder you made and check if the project is now in there visually.
+
+###### 4. Add, Commit, Push
+
+Whenever you have made a block of changes and feel like you have reached a logic point of changes locally, use "git add ." to stage those changes. Staging means your changes are temporarily saved. Once you feel like your work is of a publishable quality you can commit your code. A commit packs all the adds that have been staged and compiles them into a hash and timestamp. Finally call "git push" to upload your work online. The work flow would liike something like below
+    git add .
+    git commit -m "write a message telling people what this commit is about"
+    git push
+
+##### Foundry Toolchain
+Finally, we come to the software that enables blockchain development itself - the Foundry Toolchain. Bookmark the [Foundry Book](https://book.getfoundry.sh/), it contains all commands to enable the full software development lifecycle.
+
+What is a Toolchain? It is a term used to collectively describe all software used to deploy code. The Foundry toolchain consists of:
+1. **Forge** - The compiler. The heart of code processing. It compiles the code to Bytecode, enables testing and deploys the completed smart contract to a target chain. You will spent most of your time interacting with Forge.
+2. **Anvil** - A local simulation of a fullnode so there is no need to deploy to Sepolia testnet constantly.
+3. **Cast** - A command line tool to get information about the chain.
+4. **Chisel** - A solidity REPL. You will not be using this as we will not code directly in the command line.
+
+## That's all! Have a great semester!
