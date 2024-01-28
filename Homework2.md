@@ -3,7 +3,7 @@
 This week focuses on more advanced Solidity coding, covering fallback function vulnerabilities and upgradable contracts.
 
 ### Exercise 1 - Ethernaut fallback challenge (5 points)
-As discussed in class, fallback and receive functions are helpful to catch unexpected behaviour. However, these functions can also be exploited (depending on how they are coded) to forcefully take control of the control. Complete challenge 1 on the [Ethernaut website](https://ethernaut.openzeppelin.com/).
+As discussed in class, fallback and receive functions are helpful to catch unexpected behaviour. However, these functions can also be exploited (depending on how they are coded) to forcefully take control of the Smart Contract. Complete challenge 1 on the [Ethernaut website](https://ethernaut.openzeppelin.com/).
 
 A reminder in case you do not remember the demonstration in class, Ethernaut deploys an instance of the contract they show you and in this case, you have take ownership of the contract and drain it. Once you have drained the contract, you can submit the instance and it will let you know if it was successful.
 
@@ -11,25 +11,28 @@ How you interact with the deployed instance is completely up to you. You may wri
 
 For this exercise, please submit your script, command line calls or a screenshot of web console.
 
+Hint: Where in the code is the owner variable changeable?
+
 ### Exercise 2 - A coinflip game and its upgrade (7 + 7 + 1 points)
 ##### Part A - Designing the coin flip game (7 points)
 
-Coin flips have traditionally been the first game of choice for many protocols. It is a simple guessing game with only two outcomes - heads or tails, usually represented by 1 or 0. For our game, we are putting a new spin on it - players must guess ten flips and win if they guess ALL 10 correctly. The users will input 10 guess and our contract will randomly generate 10 flips and if they match, the player wins.
+Coin flips have traditionally been the first game of choice for many protocols. It is a simple guessing game with only two outcomes - heads or tails, usually represented by 1 or 0. For our game, we are putting a new spin on it - players must guess ten flips and win if they guess ALL 10 correctly. The users will input 10 guesses and our contract will randomly generate 10 flips and if they match, the player wins.
 
 In Solidity, there was no true randomness until the creation of [Verifiably Random Functions (VRFs)](https://chain.link/education-hub/verifiable-random-function-vrf). This requires off chain computation so we will be using a simple algorithm for the time being.
 
-For this exercise, a skeleton has been provided to help you get warmed up. Please follow the following steps:
+For this exercise, a skeleton has been provided to help you get warmed up. Please follow the below steps:
 1. Fork the [Coinflip repository](https://github.com/Dauphine-Digital-Economics/Coinflip) to your own Github account.
 1. Navigate to your instance of Coinflip and clone it to your local machine. Open it with VSCode.
-1. Where you see a TODO, you must fill in the correct code.
+1. Where you see a TODO, you must replace with the correct code.
 1. Once you have filled in the contract completely, test it by running:
 ```
 forge test
 ```
+  * Hint: Adding verbosity of the test output can help you debug. Simply add the -vvv flag after the command. 
 1. Once all of your tests are passing, push your code into your own Github.
 1. Submit the Github link to the professor via email. Make sure the repository is public and accessible.
 
-##### Part B - Upgradeable Proxy Models
+##### Part B - Upgradeable Proxy Models (7 + 1 points)
 ##### Upgrading the game (7 points)
 
 Contracts require upgrades for different reasons - one of which can be updating the mechanism of a function. For our upgrade, we will be using the UUPS model. Refer to lecture 3 if you have forgotten the architecture.
@@ -72,8 +75,12 @@ contract UUPSProxy is ERC1967Proxy {
 1. Run **forge test** and 2 out of 3 tests should pass.
 1. All that is left is to change the *seedRotation()* function.
     - Accept the owner's NewSeed input and check if the character length is 10 or more like before.
-    - Now add in a rotational logic. Imagine that the end and the beginning are connected. If we rotate the string once, the last character will become the first character. For the rotation logic, rotate the NewSeed 5 times and return the result.
+    - Now add in a rotational logic. Imagine that the end and the beginning are connected. If we rotate the string once, the last character will become the first character. For the rotation logic, rotate the NewSeed **5** times and return the result. A visual representation:
+         <img width="452" alt="image" src="https://github.com/Dauphine-Digital-Economics/Homework/assets/121296124/28024262-9b24-419a-b8a9-1530e1b391ba">
+         
     - If you have correctly implemented the rotational logic, all 3 tests should pass.
 
 ##### Proxy Comparison (1 point)
 Once you have completed your Upgradeable game, please create a README.md file and in a few sentences, explain the difference between the Transparent Proxy Model and UUPS Proxy Model.
+
+Submit the full repository link via email.
