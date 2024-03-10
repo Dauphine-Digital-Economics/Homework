@@ -29,7 +29,7 @@ Now that our contract is on testnet and funded, we can make a request for a rand
 ```
 cast send --rpc-url NODE_URL --private-key YOUR_PRIVATE_KEY CONTRACT_ADDRESS "FUNCTION_SIGNATURE"
 ```
-Forge will tell you if this was successful or not. If it was successful, go back to Etherscan, scroll down and click on the events tab. Refer to lecture 2 to understand how events are structured. **You must submit a screenshot of the events tab showing, in decimal format, the random number that you received from the oracle.**
+Forge will tell you if this was successful or not. If it was successful, go back to Etherscan, scroll down and click on the events tab. Refer to lecture 3 to understand how events are structured. **You must submit a screenshot of the events tab showing, in decimal format, the random number that you received from the oracle.**
 
 ##### Part B - Adding a VRF oracle to coinflip (6 points)
 We will now modify our Coinflip contract to using a VRF contract instead of using a seed phrase. The focus of this exercise is to get use to working on testnet, debugging through transaction traces and events, and deeply understanding how contracts interact with each other and the current gas economy of Ethereum and the user and developer experience.
