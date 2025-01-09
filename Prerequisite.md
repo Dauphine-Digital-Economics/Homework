@@ -18,6 +18,8 @@ MetaMask is an integrated wallet and a provider, which means we can see our toke
 
 After a MetaMask wallet has been installed, experiment with setting up different accounts and networks. We will be using the Sepolia network for this course. Go ahead and enable testnet networks in your MetaMask. For a wallet to interact with a chain, it needs to be able to connect to RPC services. These are servers which runs the communication protocol between user and chain. There are many RPC services out there, but a currently working one is Blast. Configure your Sepolia testnet as shown below:
 
+<img width="251" alt="image" src="https://github.com/user-attachments/assets/4e37bb4e-850f-4528-a45b-916a8a9c0b3b" />
+
 Once the RPC connection has been setup, it's time to get some tokens. Use [Google's Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) to get some tokens. Note however, only a small amount, called a "drip", is given out each day to prevent spam bots. Therefore, you have to request tokens over multiple days to get a good amount. In general 0,25 - 0,5 SepoliaETH is enough for this course.
 
 
