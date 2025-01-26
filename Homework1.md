@@ -28,6 +28,8 @@ After you have opened a PR, set one, or more, of your classmates as the reviewer
 ##### 4. Comment and Review a classmate
 If your were set as a reviewer, review their code, leave a comment and approve the PR. If you were not set as a reviewer, navigate to any PR and leave a comment. Indicate in your homework submission where you approved or commented.
 
+Note: After you have create the PR, please send a PM on Discord with your GitHub handle so you can be added as a collaborator of the project. Otherwise, your review will not count towards the branch protection requirement.
+
 ##### 5. Connecting frontend to Smart Contracts
 The Directory is made from pure HTML, CSS and JS. Today, there are many frameworks which simplify many tasks of web development. This course does not cover frontend development but it is good to have some awareness of how to connect frontends to contract logic. For this exercise, the relevant code is in *index.js*.
 
