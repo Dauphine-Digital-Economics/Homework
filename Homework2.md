@@ -68,8 +68,7 @@ contract UUPSProxy is ERC1967Proxy {
 1. Run **forge test** and 2 out of 3 tests should pass.
 1. All that is left is to change the *seedRotation()* function.
     - The function takes in a NewSeed, along with a uint to represent the number of rotations
-    - Now to add in the rotational logic, imagine that the end and the beginning are connected. If we rotate the string once, the first character will become the last character. A visual representation of 5 rotations:
-         <img width="452" alt="image" src="https://github.com/Dauphine-Digital-Economics/Homework/assets/121296124/28024262-9b24-419a-b8a9-1530e1b391ba">
+    - Now to add in the rotational logic, imagine that the end and the beginning are connected. If we rotate the string once, the first character will become the last character. 
          
     - If you have correctly implemented the rotational logic, all 3 tests should pass.
 
