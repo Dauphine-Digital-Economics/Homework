@@ -75,12 +75,18 @@ contract UUPSProxy is ERC1967Proxy {
 ##### Part C - Upgrade mechanism (2 points)
 There are other types of contract mechanisms besides the 2 presented in class. Chose a more different mechanism, briefly describe how it works and how it compares to the transparent and UUPS models.
 
-### Exercise 3 - Solidity Scripting (2 + 4 points)
-##### Part A - Token creation (2 points)
+### Exercise 3 - Solidity Scripting (3 + 3 points)
+##### Part A - Token creation (3 points)
 
-Your coinflip game is now paying out a reward - dauphine tokens with the symbol (DAU). Go ahead and create this token (remember this takes less than 30s if you get the inputs correct). And then add to both your V1 and V2 contracts a function which mints and transfers 5 dauphine tokens every time a user wins to their given wallet address. Call this the RewardUser function. The RewardUser function should be called in the UserInput function when the user guesses correctly and wins.
+Your coinflip game is now paying out a reward - ERC20 Dauphine tokens with the symbol (DAU). Go ahead and create this token (remember this takes less than 30s if you get the inputs correct). And then add to both your V1 and V2 contracts a function which mints and transfers 5 dauphine tokens every time a user wins to their given wallet address. Call this the RewardUser function. The RewardUser function should be called in the UserInput function when the user guesses correctly and wins. What new parameters do UserInput need for this additional feature?
 
-##### Part B - Simulating  (4 points)
+It would be useful to do some thinking on how the token contract is deployed, who the owner of the token contract is and how to access the contract to call its functions. The two choices of deployment are:
+1. Have foundry deploy it with a certain wallet address
+2. Have your coinflip smart contract deploy it, in which case the deployer and owner is the smart contract address.
+
+One of these options will be much easier to work with because the version of your smart contract will change.
+
+##### Part B - Simulating  (3 points)
 
 Write a script which runs through the following scenario:
 1. A user plays on V1 and wins once (show in logs he has 5 dauphine tokens)
