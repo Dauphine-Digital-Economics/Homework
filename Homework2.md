@@ -68,25 +68,34 @@ contract UUPSProxy is ERC1967Proxy {
 1. Run **forge test** and 2 out of 3 tests should pass.
 1. All that is left is to change the *seedRotation()* function.
     - The function takes in a NewSeed, along with a uint to represent the number of rotations
-    - Now to add in the rotational logic, imagine that the end and the beginning are connected. If we rotate the string once, the first character will become the last character. A visual representation of 5 rotations:
-         <img width="452" alt="image" src="https://github.com/Dauphine-Digital-Economics/Homework/assets/121296124/28024262-9b24-419a-b8a9-1530e1b391ba">
+    - Now to add in the rotational logic, imagine that the end and the beginning are connected. If we rotate the string once, the first character will become the last character. 
          
     - If you have correctly implemented the rotational logic, all 3 tests should pass.
 
 ##### Part C - Upgrade mechanism (2 points)
 There are other types of contract mechanisms besides the 2 presented in class. Chose a more different mechanism, briefly describe how it works and how it compares to the transparent and UUPS models.
 
-### Exercise 3 - Solidity Scripting (2 + 4 points)
-##### Part A - Token creation (2 points)
+### Exercise 3 - Solidity Scripting (3 + 3 points)
+##### Part A - Token creation (3 points)
 
-Your coinflip game is now paying out a reward - dauphine tokens with the symbol (DAU). Go ahead and create this token (remember this takes less than 30s if you get the inputs correct). And then add to both your V1 and V2 contracts a function which mints and transfers 5 dauphine tokens every time a user wins to their given wallet address. Call this the RewardUser function. The RewardUser function should be called in the UserInput function when the user guesses correctly and wins.
+Copy the upgradeable coinflip project into another new project and call it Coinflip-Reward.
 
-##### Part B - Simulating  (4 points)
+Your coinflip game is now paying out a reward - ERC20 Dauphine tokens with the symbol (DAU). Go ahead and create this token (remember this takes less than 30s if you get the inputs correct). And then add to both your V1 and V2 contracts a function which mints and transfers 5 dauphine tokens every time a user wins to their given wallet address. Call this the RewardUser function. The RewardUser function should be called in the UserInput function when the user guesses correctly and wins. What new parameters do UserInput need for this additional feature?
+
+It would be useful to do some thinking on how the token contract is deployed, who the owner of the token contract is and how to access the contract to call its functions. The two choices of deployment are:
+1. Have foundry deploy it with a certain wallet address
+2. Have your coinflip smart contract deploy it, in which case the deployer and owner is the smart contract address.
+
+One of these options will be easier to work with.
+
+##### Part B - Simulating  (3 points)
 
 Write a script which runs through the following scenario:
 1. A user plays on V1 and wins once (show in logs he has 5 dauphine tokens)
 2. Upgrade to v2. Check tests to get an idea how to do this.
 3. User plays on V2 and wins again (show now he has 10 dauphine tokens)
 4. User transfers some dauphine tokens to their friend, another wallet address on anvil. (show the balances of both wallet addresses).
+
+To keep things simple, you can hardcode the getFlips() function to return something predictable so you can always win. You may also remove the onlyOwner constraint on the mint function of your ERC20 token unless you really want to dive deep into delegatecall.
 
 There is no need to deploy on chain. Simulate the users and transactions through Anvil.
