@@ -25,9 +25,9 @@ cast send --rpc-url NODE_URL --private-key YOUR_PRIVATE_KEY CONTRACT_ADDRESS "FU
 ```
 Forge will tell you if this was successful or not. If it was successful, go back to Etherscan, scroll down and click on the events tab. You may have to wait for a few minutes, but you should have a *RequestSet* and a *Request Fulfilled* event. Refer to lecture 3 to understand how events are structured and refer to the *DirectFundingConsumer.sol* code to understand the structure of the two events.
 
-**1 point** - A screenshot showing the two events on Etherscan.
-**1 point** - What were the 2 random numbers the oracle generated for you?
-**3 points** - *RequestSent* returns 2 fields and *RequestFulfilled* returns 6 fields. Explain what information each of these fields conveys. 1 point for *RequestSent* and 2 points for *RequestFulfilled*.
+* **1 point** - Two screenshots showing the two events on Etherscan. One with Hex values and one with number values.
+* **1 point** - What were the 2 random numbers the oracle generated for you?
+* **3 points** - *RequestSent* returns 2 fields and *RequestFulfilled* returns 6 fields. Explain what information each of these fields conveys. 1 point for *RequestSent* and 2 points for *RequestFulfilled*.
 
 ##### Part B - Adding a VRF oracle to coinflip (6 points)
 We will now modify our Coinflip contract to using a VRF contract instead of using a seed phrase. The focus of this exercise is to get use to working on testnet, debugging through transaction traces and events, and deeply understanding how contracts interact with each other and the current gas economy of Ethereum.
