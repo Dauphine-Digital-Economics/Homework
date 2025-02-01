@@ -78,13 +78,15 @@ There are other types of contract mechanisms besides the 2 presented in class. C
 ### Exercise 3 - Solidity Scripting (3 + 3 points)
 ##### Part A - Token creation (3 points)
 
-Copy the upgradeable coinflip project into another new project and call it Coinflip-Reward.
+Copy the Upgradeable-Coinflip project into another new project and call it Coinflip-Reward.
 
-Your coinflip game is now paying out a reward - ERC20 Dauphine tokens with the symbol (DAU). Go ahead and create this token (remember this takes less than 30s if you get the inputs correct). And then add to both your V1 and V2 contracts a function which mints and transfers 5 dauphine tokens every time a user wins to their given wallet address. Call this the RewardUser function. The RewardUser function should be called in the UserInput function when the user guesses correctly and wins. What new parameters do UserInput need for this additional feature?
+Your Coinflip game is now paying out a reward - ERC20 Dauphine tokens with the symbol (DAU). For clarity, make a copy of the upgradeable project and rename your new project/repo "Reward-Coinflip". Please submit **3 separate** repositories on your Github for this homework!
+
+Go ahead and create this token (remember this takes less than 30s on the OpenZeppelin Wizard if you get the inputs correct). And then add to both your V1 and V2 contracts a function which mints and transfers 5 dauphine tokens to a given winning address. Call this the RewardUser function. The RewardUser function should be called in the UserInput function when the user guesses correctly and wins. What new parameters do UserInput need for this additional feature?
 
 It would be useful to do some thinking on how the token contract is deployed, who the owner of the token contract is and how to access the contract to call its functions. The two choices of deployment are:
 1. Have foundry deploy it with a certain wallet address
-2. Have your coinflip smart contract deploy it, in which case the deployer and owner is the smart contract address.
+2. Have your Coinflip smart contract deploy it, in which case the deployer and owner is the smart contract address.
 
 One of these options will be easier to work with.
 
@@ -98,4 +100,4 @@ Write a script which runs through the following scenario:
 
 To keep things simple, you can hardcode the getFlips() function to return something predictable so you can always win. You may also remove the onlyOwner constraint on the mint function of your ERC20 token unless you really want to dive deep into delegatecall.
 
-There is no need to deploy on chain. Simulate the users and transactions through Anvil.
+There is no need to deploy on chain. Simulate the users and transactions through Anvil if necessary.
