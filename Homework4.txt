@@ -1,0 +1,72 @@
+HOMEWORK 4
+Brian de Korodi, Tony, Joakim Kerbaol
+
+EXERCISE 1
+
+Market Research of the Space Industry
+
+Introduction
+The space industry has historically been dominated by state-funded programs with strict regulations on component reliability. However, the emergence of 
+New Space has led to a paradigm shift, emphasizing cost-effectiveness and rapid deployment over the traditional focus on highly reliable, high-cost components. 
+This paper examines France’s space strategy through CNES, comparing it to Germany’s DLR, and explores how the rise of New Space is transforming supply chains 
+and component selection. Finally, it discusses potential future trends in the industry.
+
+France’s Space Strategy and CNES
+
+The French space agency CNES (Centre National d'Études Spatiales) was founded in 1961 under the directive of President Charles de Gaulle. It was established to 
+ensure France’s sovereignty in space and advance its aerospace and defense capabilities. Over the years, CNES has focused on developing independent launch 
+capabilities, satellites, and collaborations with the European Space Agency (ESA). The agency’s efforts have led to the creation of the Ariane launch vehicle 
+series, establishing France as a dominant player in the European space sector. Governmental policies have provided substantial funding and regulatory support, 
+enabling CNES to work closely with industries like defense and aerospace to develop indigenous technology.
+
+France has integrated its space sector with its broader aerospace and defense strategy. CNES collaborates with major industrial players such as Airbus and 
+Thales Alenia Space, ensuring technological advancements that support both civilian and military applications. The government has consistently funded strategic 
+programs to reduce dependence on foreign components, aligning space development with national security needs.
+
+Germany’s Space Strategy and DLR
+
+The German Aerospace Center (DLR) has historically focused on scientific research rather than defense-driven space development. Founded in the 1960s, DLR’s 
+primary goal has been advancing aeronautics, energy, and space technology with strong academic and industrial collaborations. Unlike CNES, DLR does not have a 
+major independent launch capability and primarily relies on ESA programs for space access. Germany’s space strategy is more research-driven, with significant 
+projects in climate monitoring, Earth observation, and robotics. Given Germany’s strong automotive industry, DLR has explored synergies between automotive-grade 
+electronics and space applications. Germany’s approach relies heavily on European cooperation, contrasting with France’s ambition for greater independence in 
+space operations.
+
+France’s Dominance in the European Space Sector
+
+France’s leadership in the European space industry can be attributed to several key factors. By investing heavily in launch technology and satellite 
+infrastructure, France secured a dominant position. The Ariane rocket series, developed under CNES’s leadership, has been Europe’s primary launch vehicle for 
+decades. Unlike Germany, France has a highly integrated space and defense sector, which has facilitated sustained funding and innovation. France has provided 
+billions in subsidies to develop indigenous technology, reducing reliance on U.S. components.
+
+New Space Trends and Component Supply Chains
+
+Traditional vs. New Space Approaches
+
+Traditional space missions prioritize high-reliability components, which undergo extensive testing to withstand extreme space conditions. However, New Space 
+companies, such as SpaceX and small satellite manufacturers, have shifted towards commercial off-the-shelf components to reduce costs and production times. The 
+traditional space supply chain involves extensive qualification and radiation testing, low-volume production with long lead times, very high costs, and strict 
+supplier controls. By contrast, New Space supply chains involve limited testing with reliance on redundancy, high-volume production with faster procurement, 
+significantly lower costs, and open-market sourcing.
+
+Manufacturers’ Adaptation to New Space
+
+Manufacturers like Infineon and STMicroelectronics now offer radiation-tolerant commercial off-the-shelf components that balance cost and reliability. The 
+European Space Agency has introduced new qualification standards, such as ECSS-Q-ST-60-13C, to accommodate New Space’s needs, reducing the reliance on fully 
+high-reliability components. Emerging solutions involve blockchain-based tracking of commercial off-the-shelf component usage, ensuring traceability and quality 
+assurance.
+
+Future Outlook of the Space Industry
+
+Several key developments will shape the future of the space industry. Given that automotive-grade electronics undergo rigorous testing for harsh environments, 
+they may increasingly be used in space applications. The growing risk of space debris may force stricter regulations and de-orbiting policies. A mix of 
+high-reliability and commercial off-the-shelf components will likely dominate, driven by cost constraints and mission flexibility. The integration of blockchain 
+technology in supply chain management could enhance transparency and component tracking, addressing some of New Space’s reliability concerns.
+
+Conclusion
+
+The space industry is undergoing a significant transformation due to the rise of New Space, bringing cost-efficient and rapid deployment models into play. 
+France’s CNES has historically maintained dominance through strategic investments and defense integration, while Germany’s DLR has focused more on research and 
+automotive synergies. The shift from high-reliability components to commercial off-the-shelf is reshaping supply chains, compelling space agencies and 
+manufacturers to adapt. The future will likely see greater collaboration between the space and automotive industries, increased regulatory oversight on debris 
+management, and the adoption of blockchain for component traceability.
