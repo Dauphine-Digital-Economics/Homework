@@ -1,6 +1,6 @@
 # Homework 4 - NFTs for Space
 
-The focus this week is on applying NFTs to a real world use case: the component-for-space supply chain. This homework is writing , research and Token design heavy. Due to the work load, this homework will be done in teams of 3 and one team of 4 (we have 13 students in this class). All team members will receive the same grade. Please organize yourselves into teams. The due date for this homework is 23 February 2025.
+The focus this week is on applying NFTs to a real world use case: the component-for-space supply chain. This homework is writing , research and Token design heavy. Due to the work load, this homework will be done in teams of 3 and one team of 4 (we have 13 students in this class). All team members will receive the same grade. Please organize yourselves into teams. The due date for this homework is 2 March 2025.
 
 Please note, this Homework may be graded by a panel and therefore taking longer to return.
 
