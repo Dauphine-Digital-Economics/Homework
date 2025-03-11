@@ -1,6 +1,6 @@
 # Homework 5 - SDLC of Onchain DAO
 
-The last homework of the course will simulate the full software development lifecycle - from planning to release. Each team will code a Decentralized Autonomous Organisation (DAO) and thoroughly test and audit their work. As the capstone project for this course, the scope is relatively complex but there are bonus points which allows groups to earn potentially 7 points above 20 in this homework. The due date of this homework is 23 March 2025.
+The last homework of the course will simulate the full software development lifecycle - from planning to release. Each team will code a Decentralized Autonomous Organisation (DAO) and thoroughly test and audit their work. As the capstone project for this course, the scope is relatively complex but there are bonus points which allows groups to earn potentially 7 points above 20 in this homework. The due date of this homework is 30 April 2025.
 
 A summary of all possible bonus points:
 1. Gas section snapshot - 1 point
