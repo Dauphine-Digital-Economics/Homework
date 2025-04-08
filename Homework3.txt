@@ -1,0 +1,76 @@
+Exercise 1 - Part C
+Chainlink's Verifiable Random Function (VRF) offers two primary methods for funding randomness requests: the Subscription Method and the Direct Funding Method.
+
+Subscription Method: In this approach, developers create a subscription account and pre-fund it with LINK tokens. Multiple consumer contracts can be authorized 
+to draw from this centralized subscription. This method is particularly cost-effective for applications requiring frequent or regular random number generation, 
+as it reduces gas costs by eliminating the need to fund each request individually. It's also suitable for managing multiple contracts that need access to 
+randomness, providing a streamlined funding mechanism.
+
+Direct Funding Method: Here, each consuming contract is directly funded with LINK tokens to pay for randomness requests. This method is more appropriate for 
+applications with infrequent or one-time random number needs. While it may incur higher gas costs due to individual funding transactions, it offers simplicity 
+for projects that don't require regular randomness or have a limited number of contracts.
+
+Use Cases:
+
+Subscription Method: Ideal for gaming platforms, lotteries, or any decentralized applications (dApps) that demand regular and frequent random number 
+generation across multiple contracts.
+
+Direct Funding Method: Suitable for projects that need randomness sparingly, such as single-instance raffles or occasional random selections, where 
+setting up a subscription might be unnecessary overhead.
+
+Choosing between these methods depends on the specific requirements of the application, including the frequency of randomness requests and the number of 
+contracts involved.
+
+Exercise 2 - Part A
+Collateralized Debt Positions (CDPs) are fundamental to decentralized finance (DeFi), allowing users to lock assets as collateral to generate stablecoins or 
+other tokens. MakerDAO, known for its DAI stablecoin, has been a pioneer in this space. However, the DeFi landscape has evolved, with several protocols offering 
+unique CDP products.
+
+Market Overview
+According to DeFiLlama, the CDP sector has a Total Value Locked (TVL) of approximately $8.55 billion, with MakerDAO dominating 56.40% of the market. Competitors 
+like Liquity and Curve Finance have also established significant presences.
+
+Stablecoin Performance
+DAI, MakerDAO's stablecoin, maintains a substantial presence in the stablecoin market. Its performance, in terms of market capitalization and stability, reflects 
+the protocol's robustness. However, other stablecoins have emerged, each with distinct mechanisms and collateral structures.
+
+Yield Opportunities
+Staking DAI offers users opportunities to earn yields. Various DeFi platforms provide staking options with competitive interest rates, allowing DAI holders to 
+generate passive income.
+
+Liquidation Mechanics
+Liquidations are integral to maintaining the stability of CDP platforms. Protocols have developed diverse liquidation mechanisms, each with specific penalties 
+and incentives, ensuring the system's health and solvency.
+
+Metrics from Lecture 5
+Two critical metrics to assess CDP platforms are the Collateralization Ratio and Liquidation Threshold. The Collateralization Ratio indicates the amount of 
+collateral required relative to the debt issued, reflecting the system's risk tolerance. The Liquidation Threshold is the point at which a position becomes 
+undercollateralized and subject to liquidation, crucial for managing platform risk.
+
+Exercise 2 - Part B
+The MKR token serves as the governance token for the Maker Protocol. Its value dynamics are influenced by various factors, including system surplus and 
+liquidation events. Research indicates that MKR tokens appreciate with an increase in system surplus and depreciate with a rise in systemic risk due to DAI 
+liquidation spirals.
+
+Table:
+
+Function	                                   Before Black Thursday	                                                          After Black Thursday
+Governance	             MKR holders participated in protocol governance decisions.	                Continued governance participation with enhanced focus on risk management.
+Risk Management      MKR was minted during liquidation events to cover system deficits.              Introduction of improved risk parameters and mechanisms to mitigate systemic risks.
+Stability Fees         MKR was used to pay stability fees within the protocol.                      Stability fee mechanisms were refined to enhance system stability.
+Token Burning         	MKR tokens were burned to reduce total supply, maintaining scarcity.        Continued token burning with adjustments to burning mechanisms for better efficiency.
+
+
+Exercise 2 - Part C
+MakerDAO's rebranding to Sky signifies a strategic shift aimed at enhancing the protocol's governance and tokenomics. The proposed deflationary tokenomics, 
+which involve eliminating token emissions under regular conditions and implementing a strict token-burning mechanism, are designed to reduce the total token 
+supply over time. This approach aims to enhance the value proposition of the governance token and ensure the long-term sustainability of the protocol.
+
+Looking ahead, the evolution of technology, particularly advancements in artificial intelligence (AI) and quantum computing, could have profound implications 
+for blockchain and DeFi platforms. AI could enhance predictive analytics for risk management, optimize collateralization strategies, and improve user experiences 
+through personalized financial services. Conversely, quantum computing poses potential risks to cryptographic security, necessitating the development of 
+quantum-resistant algorithms to safeguard blockchain integrity.
+
+In conclusion, MakerDAO's proactive approach to rebranding and tokenomic restructuring reflects its commitment to adaptability and resilience in the rapidly 
+evolving DeFi landscape. By embracing technological advancements and addressing emerging challenges, MakerDAO is well-positioned to maintain its leadership in 
+decentralized finance.
