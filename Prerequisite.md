@@ -18,6 +18,8 @@ MetaMask is an integrated wallet and a provider, which means we can see our toke
 
 After a MetaMask wallet has been installed, experiment with setting up different accounts and networks. We will be using the Sepolia network for this course. Make sure you select this network in the dropdown. If it does not appear, manually enable test networks in the settings.
 
+<img width="286" height="124" alt="Metamask Sepolia" src="https://github.com/user-attachments/assets/29aa39c3-2700-414e-9c8b-68cf6e8518e3"/>
+
 Next, use [Google's Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) to get some tokens. Note however, only a small amount, called a "drip", is given out each day to prevent spam bots. Therefore, you have to request tokens over multiple days to get a good amount. 0,25 - 0,5 SepoliaETH is sufficient for this course.
 
 
@@ -34,7 +36,9 @@ To start, please sign up and bookmark the DAO [here](https://testnet.v1.snapshot
 
 ##### Remix
 
-Remix is an IDE which allows you to write, test, and deploy Solidity code from your web browser. Once again, bookmark [this](https://remix.ethereum.org/) link. After you enter Remix, it is essential to connect it to your Github. This is because your homework is submitted on Github and as a browser application, if the browser crashes, you lose your work. Therefore, go to the left hand side and click on the Git button (looks like a branch). Then open the Github Setup tab (ignore the giant initialize repository button) and click the "Login with Github" button. If you are already logged into your Github account, this should be automatic. Otherwise, you may also manually fill in your Github details below.
+Remix is an IDE which allows you to write, test, and deploy Solidity code from your web browser. Once again, bookmark [this](https://remix.ethereum.org/) link. After you enter Remix, it is essential to connect it to your Github. This is because your homework is submitted on Github and as a browser application, if the browser crashes, you lose your work. Therefore, go to the left hand side and click on the Git button <img width="23" height="28" alt="Git Icon" src="https://github.com/user-attachments/assets/8168ce50-4ff8-48dc-804f-42f3fed3c775" />. Then open the Github Setup tab (ignore the giant initialize repository button) and click the "Login with Github" button. If you are already logged into your Github account, this should be automatic. Otherwise, you may also manually fill in your Github details below.
+
+<img width="316" height="437" alt="Remix Git" src="https://github.com/user-attachments/assets/feafdad9-2e43-41aa-8009-734c53315547" />
 
 Additionally, it is highly advised that you import the [LearnEth plugin](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html). This plugin provides in depth tutorials which explain both the Remix interface, and many aspects of the Solidity programming language. LearnEth serves as a complementary source to the class content.
 
@@ -113,3 +117,4 @@ git push origin main
 ```
 
 ## That's all! Have a great semester!
+
