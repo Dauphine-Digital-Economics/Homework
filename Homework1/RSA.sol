@@ -34,7 +34,7 @@ contract RSA{
     /// @param data the original message
     /// @return a signed message of the *digest*
     function Sign_Message(string calldata data) public view returns(uint){
-        // Called the hash function to create the message digest from user data
+        // Call the hash function to create the message digest from user data
 
         // Sign the message with private key (digest^e%n)
         uint signed = ;
@@ -58,4 +58,5 @@ contract RSA{
         return ;
 
     }
+
 }
