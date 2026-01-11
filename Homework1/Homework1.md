@@ -99,9 +99,13 @@ In this example, we have "grabbed" the last bit of the 1101, which is 1.
 
 ###### IP address structure
 IP addresses are structured into four segments of 8 bits, for a total of 32 bits. Take for example, the static localhost of every computer is 127.0.0.1, translated into binary would be:
+
 127 -> 01111111
+
 0 -> 00000000
+
 0 -> 00000000
+
 1 -> 00000001
 
 The function input for the above IP would therefore be "01111111000000000000000000000001".
@@ -127,13 +131,18 @@ Now that you are able to grab the four sections of the IP address, grab each sec
 Below shows a successful implementation.
 
 A user input of "11000100001011110101100101111100", should give:
+
 Country -> 11000100 -> 196 -> Singapore
+
 ISP -> 00101111 -> 47 -> Telkom
+
 Institute -> 01011001 -> 89 -> University
+
 Device -> 01111100 -> 124 -> Windows
 
-Take a screenshot of a similar result. You may also use your own inputs. (4 points)
+<img width="322" height="638" alt="Screenshot 2026-01-11 174111" src="https://github.com/user-attachments/assets/4da5ac19-ac34-479f-8655-0b2fbf891f22" />
 
+Take a screenshot of a similar result and submit it along with your code. You may also use your own inputs. (4 points)
 
 ##### Exercise 3 - Blockchain Networking (10 points)
 
