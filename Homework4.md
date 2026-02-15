@@ -57,6 +57,6 @@ The purpose of this document is to explain the design decisions you made in the 
 
 ### Bonus Exercise -  Demonstrate your NFT digital twin (3 points)
 
-According to what you described in Exercise 2, please implement your tokens in code. Feel free to use the [OpenZeppelin Wizard](https://wizard.openzeppelin.com/#erc721), or any other templating tool, and then add the functions you mentioned in your Specs.
+According to what you described in Exercise 2, please implement your tokens on the Sepolia test network. Feel free to use the [OpenZeppelin Wizard](https://wizard.openzeppelin.com/#erc721), or any other templating tool, and then add the functions you mentioned in your Specs.
 
 Once the smart contract is compiled without errors, deploy the NFT contract in the Sepolia network and perform a few transactions which demonstrates the different use cases you mentioned in your paper. In your submission, please state the contract address and include screenshots of appropriate batches of transactions. Each batch should represent a feature of your digital twin. Provide a brief description wth each screenshot.
